@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/image_cloudy_texture"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/image_cloudy_texture_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GlucemicCalcAid"
+        tools:targetApi="31">
+
+
+        <activity
+            android:name=".CarbsIn100g"
+            android:exported="false" />
+        <activity
+            android:name=".PortionOfXCarbs"
+            android:exported="false" />
+        <activity
+            android:name=".CarbsOfXPortion"
+            android:exported="false"
+            android:label="@string/title_activity_carbs_of_xportion"
+            android:theme="@style/Theme.GlucemicCalcAid" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".splashScreen"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
