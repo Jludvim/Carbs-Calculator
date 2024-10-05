@@ -9,15 +9,16 @@ An in-depth paragraph about your project and overview of use.
 The app takes some data, and makes some math operations that otherwise should be either manually performed
 or merely estimated.
 It has three chief functionalities so far. All of which require the use of a kitchen scale.
-    1. Determining the amount of carbs a portion has, knowing: 
+
+ 1. Determining the amount of carbs a portion has, knowing: 
                 -the carbs in 100g that food has
                 -the portion size (g)
 
-    2. Determining a portion size, knowing:
+2. Determining a portion size, knowing:
                 -the amount of carbs in 100g that food has (g)
                 -the desired final carb count (g)
 
-    3. Determining the amount of carbs a food has in 100g, knowing:
+ 3. Determining the amount of carbs a food has in 100g, knowing:
                 -a serving size
                 -amount of carbs per such serving 
                 (both generally specified in most packages)
