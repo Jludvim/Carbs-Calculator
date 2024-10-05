@@ -3,11 +3,9 @@ package com.example.glucemiccalcaid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnCarbsIn100g;
     Button btnCarbsOfPortion;
     Button btnPortionOfCarbs;
+    Button btnPrepareAMeal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
         btnCarbsIn100g = findViewById(R.id.btnMenuCarbsIn100g);
         btnCarbsOfPortion = findViewById(R.id.btnMenuCarbsOfPortion);
         btnPortionOfCarbs = findViewById(R.id.btnMenuPortionOfCarbs);
+        btnPrepareAMeal = findViewById(R.id.btnPrepMeal);
+
+
+        btnPrepareAMeal.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                prepareAMeal();
+            }
+        });
 
         btnCarbsIn100g.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
@@ -59,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, CarbsIn100g.class);
         startActivity(i);
     }
+
+    protected void prepareAMeal(){
+        Intent i = new Intent(MainActivity.this, DishBuilding.class);
+        startActivity(i);
+    }
+
 
 
 

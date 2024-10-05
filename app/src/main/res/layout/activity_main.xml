@@ -47,13 +47,13 @@
         android:id="@+id/btnMenuCarbsIn100g"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#202020"
         android:onClick="CarbsIn100g"
         android:text="Carbs in 100g"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenuPortionOfCarbs" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPrepMeal" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -67,5 +67,17 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPrepMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#202020"
+        android:onClick="prepareAMeal"
+        android:text="Prepare a Meal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuPortionOfCarbs" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
