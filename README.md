@@ -22,8 +22,12 @@ It has three chief functionalities so far. All of which require the use of a kit
                 -a serving size
                 -amount of carbs per such serving 
                 (both generally specified in most packages)
+    
+ 4. Adding a serie of (g) food values with a specific carbs rate value in 100g
+    Allowing cooking and preparing complex dishes, or else integrating different values for a personal meal
 
-This app is a first version.
+
+This app is in its first versions.
 It is quite likely that more functionalities will be added, and many errors will be corrected.
 
 
@@ -48,7 +52,8 @@ It is quite likely that more functionalities will be added, and many errors will
 
 ## Version History
 
-
+* 0.2
+   * Prepare a meal functionality was added to the app
 * 0.1
     * Initial Release
 
