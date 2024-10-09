@@ -1,6 +1,5 @@
 # Carbs Calculator
 
-Simple overview of use/purpose.
 Carbs Calculator is an app developed to facilitate carbs counting. Chiefly for personal use.
 
 ## Description
@@ -33,16 +32,34 @@ It is quite likely that more functionalities will be added, and many errors will
 
 ## Getting Started
 
-### Dependencies
-
-* Android Studio
-* a virtual or real android device
-* 
-
 ### Installing
 
-* Set up your Version Control in android
-* Use the repo link (https://github.com/Jludvim/Carbs-Calculator.git) to install it
+#### Dependencies
+* Java Development Kit (JDK)
+* Android Studio IDE
+* Git version control system
+
+To set up Android Studio:
+Download and install Android Studio from the official website: https://developer.android.com/studio
+
+To start working with the repo:
+* Open a terminal or command prompt
+* Navigate to the directory where you want to clone the repository
+* Run the following command to clone the repository:
+ ```
+git clone https://github.com/Jludvim/Carbs-Calculator.git
+ ```
+
+Open Android Studio
+Click on "Open an Existing Project" in the welcome screen
+Navigate to the Carbs-Calculator folder you cloned earlier
+Select the folder and click "OK"
+
+Run the app
+Pick your device on the dropdown menu (as of now, these configurations are found by default at the top)
+Click on the "Run" button in Android Studio (at the right)
+The app should now launch on your selected device or emulator.
+
 
 ## Authors
 
@@ -52,13 +69,14 @@ It is quite likely that more functionalities will be added, and many errors will
 
 ## Version History
 
+* 0.x The app is still under development and some features are still meant to be added
 * 0.2
    * Prepare a meal functionality was added to the app
 * 0.1
     * Initial Release
+ 
 
 
 ## License
 
 If you wish to use the code, contact me at: jeremiaspini7@gmail.com
-Permission is needed
