@@ -54,5 +54,7 @@ It is quite likely that more functionalities will be added, and many errors will
  
 
 ## License
-Check the license file.
-For any query, you may contact me at: jeremiaspini7@gmail.com
+GNU General Public License v3.0
+
+
+For any query/issue or just chatting, you may contact at: jeremiaspini7@gmail.com
