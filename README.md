@@ -1,11 +1,9 @@
 # Carbs Calculator
 
-Simple overview of use/purpose.
 Carbs Calculator is an app developed to facilitate carbs counting. Chiefly for personal use.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
 The app takes some data, and makes some math operations that otherwise should be either manually performed
 or merely estimated.
 It has three chief functionalities so far. All of which require the use of a kitchen scale.
@@ -56,5 +54,5 @@ It is quite likely that more functionalities will be added, and many errors will
  
 
 ## License
-
-If you wish to use the code, contact me at: jeremiaspini7@gmail.com
+Check the license file.
+For any query, you may contact me at: jeremiaspini7@gmail.com
