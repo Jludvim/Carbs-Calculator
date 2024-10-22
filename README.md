@@ -33,7 +33,6 @@ It is quite likely that more functionalities will be added, and many errors will
 
 * Android Studio
 * a virtual or real android device
-* 
 
 ### Installing
 
