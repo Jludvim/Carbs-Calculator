@@ -58,4 +58,3 @@ It is quite likely that more functionalities will be added, and many errors will
 ## License
 
 If you wish to use the code, contact me at: jeremiaspini7@gmail.com
-Permission is needed
