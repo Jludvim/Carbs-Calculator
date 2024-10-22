@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="my_dark_primary">#CDCDCD</color>
+    <color name="my_dark_secondary">#131313</color>
+    <color name="my_dark_obscured">#333333</color>
+
+    <color name="my_light_primary">#202020</color>
+    <color name="my_light_secondary">#DFDFDF</color>
+
 </resources>

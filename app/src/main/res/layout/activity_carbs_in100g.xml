@@ -4,14 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".carbsIn100g">
+    tools:context=".CarbsIn100g">
+
+    <ImageButton
+        android:id="@+id/HelpBtn__ActCarbsIn100g"
+        style="BUTTON"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        android:onClick="showHelp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_help" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
         android:layout_width="0dp"
         android:layout_height="142dp"
-        android:background="?attr/colorPrimary"
-        android:backgroundTint="#202020"
+        style="@style/BAR"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,76 +37,128 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
-    <EditText
-        android:id="@+id/editTextCarbsPerServing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/editTextServing"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.756"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewServing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
-        android:text="Serving"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalcCarbsIn100g"
-        app:layout_constraintEnd_toStartOf="@+id/editTextServing"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:text="Carbs"
-        app:layout_constraintBottom_toTopOf="@+id/textViewServing"
-        app:layout_constraintEnd_toStartOf="@+id/editTextCarbsPerServing"
-        app:layout_constraintHorizontal_bias="0.715"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnCalcCarbsIn100g"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
-        android:backgroundTint="#202020"
-        android:onClick="CalcCarbsIn100"
-        android:text="Calculate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextServing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalcCarbsIn100g"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.751"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/textViewAnswerCarbsIn100g"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="252dp"
-        android:layout_marginBottom="82dp"
+        style="style/text"
         app:layout_constraintBottom_toTopOf="@+id/editTextCarbsPerServing"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        style="@style/EDITTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:ems="10"
+        android:hint="(Only for storage)"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcCarbsIn100g"
+        app:layout_constraintEnd_toEndOf="@+id/editTextServing"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextServing" />
+
+    <Button
+        android:id="@+id/btnCalcCarbsIn100g"
+        style="@style/BUTTON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="196dp"
+        android:onClick="CalcCarbsIn100"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextName" />
+
+    <TextView
+        android:id="@+id/textViewServing"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Serving"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextServing"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/editTextServing"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextName"
+        app:layout_constraintEnd_toEndOf="@+id/textViewServing"
+        app:layout_constraintTop_toTopOf="@+id/editTextName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/BUTTON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:onClick="storeItem"
+        android:text="Store"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCalcCarbsIn100g"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintStart_toEndOf="@+id/btnCalcCarbsIn100g" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Carbs"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextCarbsPerServing"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCarbsPerServing"
+        app:layout_constraintHorizontal_bias="0.697"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/editTextCarbsPerServing"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextServing"
+        style="@style/EDITTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/editTextName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCarbsPerServing"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextCarbsPerServing" />
+
+    <EditText
+        android:id="@+id/editTextCarbsPerServing"
+        style="@style/EDITTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/editTextServing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/helpView__CarbsIn100g"
+        style="@style/CARD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="showHelp"
+        android:text="In this view you can calculate, based in the amount of carbs of a certain serving the amount of carbs such a food has in 100g. \n You might also store the data introduced.  For this, a name is required. \n(Tap help button to hide)"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintStart_toStartOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcCarbsIn100g" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

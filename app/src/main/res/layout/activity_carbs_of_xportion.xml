@@ -4,82 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="switchToStorage"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTextCarbsRatio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPortionGrams"
+    <ImageButton
+        android:id="@+id/HelpBtn__ActCarbsOfXPortion"
+        style="BUTTON"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        android:onClick="showHelp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.766"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:srcCompat="@android:drawable/ic_menu_help" />
 
     <EditText
         android:id="@+id/editTextPortionGrams"
+        style="@style/EDITTEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="48dp"
         android:ems="10"
         android:inputType="numberSigned"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/btnMenuCarbsOfPortion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCarbsRatio"
+        style="@style/EDITTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPortionGrams"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPortionGrams"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextPortionGrams" />
+
+    <TextView
+        android:id="@+id/txtPortionSize"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Portion (g):"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPortionGrams"
+        app:layout_constraintEnd_toEndOf="@+id/txtCarbsRatio"
+        app:layout_constraintTop_toTopOf="@+id/editTextPortionGrams"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:id="@+id/txtCarbsRatio"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:onClick="switchToStorage"
+        android:text="Carbs per 100g:"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextCarbsRatio"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCarbsRatio"
+        app:layout_constraintTop_toTopOf="@+id/editTextCarbsRatio"
+        app:layout_constraintVertical_bias="0.461" />
 
     <Button
         android:id="@+id/btnMenuCarbsOfPortion"
+        style="@style/BUTTON"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="164dp"
-        android:backgroundTint="#202020"
+        android:layout_marginBottom="208dp"
         android:onClick="calcCarbs"
         android:text="Calculate Carbs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintHorizontal_bias="0.591"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtCarbsRatio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="64dp"
-        android:text="Carbs per 100g:"
-        app:layout_constraintBottom_toTopOf="@+id/txtPortionSize"
-        app:layout_constraintEnd_toStartOf="@+id/editTextCarbsRatio" />
-
-    <TextView
-        android:id="@+id/txtPortionSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="84dp"
-        android:text="Portion (g):"
-        app:layout_constraintBottom_toTopOf="@+id/btnMenuCarbsOfPortion"
-        app:layout_constraintEnd_toStartOf="@+id/editTextPortionGrams" />
 
     <TextView
         android:id="@+id/carbsAnswer"
+        style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="48dp"
         android:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/editTextCarbsRatio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
+        style="@style/BAR"
         android:layout_width="0dp"
         android:layout_height="142dp"
-        android:background="?attr/colorPrimary"
-        android:backgroundTint="#202020"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,5 +120,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <Spinner
+        android:id="@+id/spinnerCarbsOfXPortion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextCarbsRatio"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCarbsRatio"
+        app:layout_constraintStart_toStartOf="@+id/editTextCarbsRatio"
+        app:layout_constraintTop_toTopOf="@+id/editTextCarbsRatio"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/helpView__CarbsOfXPortion"
+        style="@style/CARD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="In this view, knowing the amount of carbs the food holds in 100g, you can set a portion size, and get the amount of carbs it will have. \n (Tap the help button to hide)"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/HelpBtn__ActCarbsOfXPortion"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPortionGrams"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextPortionGrams"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuCarbsOfPortion"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

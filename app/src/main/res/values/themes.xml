@@ -2,8 +2,39 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.GlucemicCalcAid" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="backgroundColor">@color/my_light_secondary</item>
+        <item name="android:textColor">@color/my_light_primary</item>
+        <!-- Maybe delete these lines above in both this file and the night file -->
+    </style>
+        <style name="SCREEN">
+        <item name="backgroundColor">@color/my_light_secondary</item>
+        </style>
+
+        <style name="BAR">
+            <item name="android:background">@color/my_light_primary</item>
+        </style>
+
+    <style name="TEXT">
+        <item name="android:textColor">@color/my_light_primary</item>
+    </style>
+
+    <style name="EDITTEXT">
+        <item name="android:backgroundTint">@color/my_light_primary</item>
+        <item name="android:textColor">@color/my_light_primary</item>
+    </style>
+
+    <style name="BUTTON">
+        <item name="backgroundTint">@color/my_light_primary</item>
+        <item name="android:textColor">@color/my_light_secondary</item>
+    </style>
+
+    <style name="CARD">
+        <item name="android:background">@color/my_light_primary</item>
+        <item name="android:textColor">@color/my_light_secondary</item>
+        <item name="android:padding">25dp</item>
     </style>
 
     <style name="Theme.GlucemicCalcAid" parent="Base.Theme.GlucemicCalcAid" />
+
+
 </resources>

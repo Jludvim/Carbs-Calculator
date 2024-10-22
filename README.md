@@ -48,10 +48,12 @@ It is quite likely that more functionalities will be added, and many errors will
 
 ## Version History
 
-
+* 0.2
+    * Storage added
+    * Some functionalities have been improved
 * 0.1
     * Initial Release
-
+ 
 
 ## License
 
