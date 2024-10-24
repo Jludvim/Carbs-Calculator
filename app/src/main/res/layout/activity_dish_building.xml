@@ -43,16 +43,6 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextIngredientOrCarbsAmount"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Switch
-        android:id="@+id/functionSwitcher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="switchFunction"
-        android:text="Action"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/switchStorageDishBuilding" />
-
     <TextView
         android:id="@+id/textView6"
         style="@style/TEXT"
@@ -77,6 +67,7 @@
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextCarbsRatioOfIngredient"
+        app:layout_constraintStart_toStartOf="@+id/editTextCarbsRatioOfIngredient"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.402" />
 
@@ -98,11 +89,9 @@
         style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/functionSwitcher"
-        app:layout_constraintStart_toEndOf="@+id/functionSwitcher"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
-        app:layout_constraintVertical_bias="0.359" />
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
     <ImageButton
         android:id="@+id/gotoMenubtn"
@@ -192,35 +181,44 @@
         style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:text="Amount (g): 0"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPreviewData"
         app:layout_constraintStart_toStartOf="@+id/editTextIngredientOrCarbsAmount"
-        app:layout_constraintTop_toBottomOf="@+id/editTextIngredientOrCarbsAmount"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextIngredientOrCarbsAmount" />
 
     <TextView
         android:id="@+id/textViewAnswerCarbs"
         style="@style/TEXT"
-        android:layout_width="74dp"
-        android:layout_height="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Carbs (g): 0"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewAnswerAmount"
-        app:layout_constraintEnd_toEndOf="@+id/editTextIngredientOrCarbsAmount"
-        app:layout_constraintTop_toTopOf="@+id/textViewAnswerAmount" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonPreviewData"
+        app:layout_constraintStart_toStartOf="@+id/textViewAnswerAmount"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAnswerAmount" />
 
     <Button
         android:id="@+id/buttonPreviewData"
         style="@style/BUTTON"
         android:layout_width="204dp"
         android:layout_height="37dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="92dp"
         android:onClick="calculateData"
         android:text="Preview"
         app:layout_constraintEnd_toEndOf="@+id/editTextIngredientOrCarbsAmount"
-        app:layout_constraintHorizontal_bias="0.833"
-        app:layout_constraintStart_toStartOf="@+id/editTextIngredientOrCarbsAmount"
         app:layout_constraintTop_toBottomOf="@+id/editTextIngredientOrCarbsAmount" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/BUTTON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="resetAcc"
+        android:text="Reset"
+        app:layout_constraintEnd_toStartOf="@+id/btnSumIngredients"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="@+id/buttonPreviewData"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPreviewData" />
 
     <Button
         android:id="@+id/btnSumIngredients"
@@ -231,30 +229,6 @@
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="@+id/buttonPreviewData" />
-
-    <Button
-        android:id="@+id/button8"
-        style="@style/BUTTON"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:onClick="resetAcc"
-        android:text="Reset"
-        app:layout_constraintEnd_toStartOf="@+id/btnSumIngredients"
-        app:layout_constraintHorizontal_bias="0.035"
-        app:layout_constraintStart_toStartOf="@+id/buttonPreviewData"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPreviewData" />
-
-    <Switch
-        android:id="@+id/switchStorageDishBuilding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:onClick="switchToStorage"
-        android:text="Storage"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCarbsRatioOfIngredient"
-        app:layout_constraintEnd_toEndOf="@+id/editTextCarbsRatioOfIngredient" />
 
     <Spinner
         android:id="@+id/spinnerDishBuilding"
