@@ -19,16 +19,16 @@
     </style>
 
     <style name="BAR">
-        <item name="android:background">@color/my_dark_primary</item>
+        <item name="android:background">@color/light_blue</item>
     </style>
 
     <style name="BUTTON">
         <item name="android:textColor">@color/my_dark_secondary</item>
-        <item name="backgroundTint">@color/my_dark_primary</item>
+        <item name="backgroundTint">@color/light_blue</item>
     </style>
 
     <style name="CARD">
-        <item name="android:background">@color/my_dark_primary</item>
+        <item name="android:background">@color/light_blue</item>
         <item name="android:textColor">@color/my_dark_secondary</item>
         <item name="android:padding">25dp</item>
     </style>

@@ -198,10 +198,10 @@ public class DishBuilding extends AppCompatActivity {
         double carbsRatioNum=0;
         double amountIngredientNum=0;
         double carbsAmount=0;
-        Switch functionSwitcher = findViewById(R.id.functionSwitcher);
         EditText EditText_CarbsRatio = findViewById(R.id.editTextCarbsRatioOfIngredient);
         TextView TextView_lblHelp = findViewById(R.id.lblHelp);
         EditText amountFood = findViewById(R.id.editTextIngredientOrCarbsAmount); //Ingredient here
+        TextView AmountOrDesiredCarbs = findViewById(R.id.AmountOrDesiredCarbs);
 
         //Integrity check
         if(EditText_CarbsRatio.getText().equals("") || amountFood.getText().equals("")){
@@ -230,7 +230,7 @@ public class DishBuilding extends AppCompatActivity {
         }
 
 
-        if(!functionSwitcher.isChecked()){ //If we know amount of food(g) and carbs in 100g...
+        if(AmountOrDesiredCarbs.getText().equals("Amount (g)")){ //If we know amount of food(g) and carbs in 100g...
             try{
                 amountIngredientNum = Integer.parseInt(amountFood.getText().toString());
                 carbsAmount = (carbsRatioNum / 100) * amountIngredientNum;
@@ -240,7 +240,7 @@ public class DishBuilding extends AppCompatActivity {
             }
             ((TextView)findViewById(R.id.lblHelp)).setText("Amount of carbs in ingredient is: "+Double.toString(carbsAmount));
 
-        }else{
+        }else{ //If it is "Desired Carbs (g)"
             //If we know portion (g) and carbs in 100g...
 
             EditText desiredCarbs = findViewById(R.id.editTextIngredientOrCarbsAmount); //carbs here
@@ -252,8 +252,8 @@ public class DishBuilding extends AppCompatActivity {
                 return;
             }
 
-            amountIngredientNum = Math.floor (carbsAmount / (carbsRatioNum/100)) / 100; //the calculation, with a max of two decimal points
-
+            amountIngredientNum = Math.floor(carbsAmount / (carbsRatioNum/100)); //the calculation, with a max of two decimal points
+                //answer = desiredCarbsNum / (carbsRatioNum / 100);
             ((TextView)findViewById(R.id.lblHelp)).setText("Amount of ingredient to get is: "+Double.toString(amountIngredientNum));
         }
 

@@ -18,16 +18,18 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
+        style="@style/BAR"
         android:layout_width="0dp"
         android:layout_height="142dp"
-        style="@style/BAR"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        style="@style/BUTTON"
         android:id="@+id/GotoMainMenu2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -160,5 +162,14 @@
         app:layout_constraintEnd_toEndOf="@+id/editTextName"
         app:layout_constraintStart_toStartOf="@+id/editTextName"
         app:layout_constraintTop_toBottomOf="@+id/btnCalcCarbsIn100g" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="148dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="@+id/toolbar3"
+        app:srcCompat="@drawable/lion_and_lamb_peace_svgrepo_com" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

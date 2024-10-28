@@ -11,7 +11,7 @@
         </style>
 
         <style name="BAR">
-            <item name="android:background">@color/my_light_primary</item>
+            <item name="android:background">@color/cyan_bar</item>
         </style>
 
     <style name="TEXT">
@@ -24,12 +24,12 @@
     </style>
 
     <style name="BUTTON">
-        <item name="backgroundTint">@color/my_light_primary</item>
+        <item name="backgroundTint">@color/cyan_bar</item>
         <item name="android:textColor">@color/my_light_secondary</item>
     </style>
 
     <style name="CARD">
-        <item name="android:background">@color/my_light_primary</item>
+        <item name="android:background">@color/cyan_bar</item>
         <item name="android:textColor">@color/my_light_secondary</item>
         <item name="android:padding">25dp</item>
     </style>

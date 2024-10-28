@@ -3,6 +3,10 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="cyan_bar">#0038A7</color>
+
+    <color name="light_blue">#0091FF</color>
+
     <color name="my_dark_primary">#CDCDCD</color>
     <color name="my_dark_secondary">#131313</color>
     <color name="my_dark_obscured">#333333</color>

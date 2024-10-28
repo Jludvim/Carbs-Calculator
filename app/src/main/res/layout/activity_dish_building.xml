@@ -95,9 +95,9 @@
 
     <ImageButton
         android:id="@+id/gotoMenubtn"
+        style="@style/BUTTON"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#202020"
         android:onClick="gotoMenu"
         app:layout_constraintStart_toStartOf="@+id/toolbar5"
         app:layout_constraintTop_toTopOf="@+id/toolbar5"
