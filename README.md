@@ -45,7 +45,9 @@ It is quite likely that more functionalities will be added, and many errors will
 
 ## Version History
 * 0.x
-    * App still in development. Some functionalities are still to be added 
+    * App still in development. Some functionalities are still to be added
+* 0.3
+    * Minor improvements to UI performed  
 * 0.2
     * Storage added
     * Some functionalities have been improved
